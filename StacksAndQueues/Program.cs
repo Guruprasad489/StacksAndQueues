@@ -13,10 +13,11 @@ namespace StacksAndQueues
             Console.WriteLine("Welcome to Stacks and Queues programs");
 
             Stack stack = new Stack();
+            Queue queue = new Queue();
 
             Console.WriteLine("Choose an option:");
-            Console.WriteLine("\n1. Push element to stack \n2. push element to stack using linkedlist" +
-                "\n3. Peek top element \n4. Delete the top element \n5. Empty the stack");
+            Console.WriteLine("\n1. Push element to stack \n2. push element to stack using linkedlist \n3. Peek top element \n4. Delete the top element \n5. Empty the stack" +
+                "\n6. Add elements to Queue \n7. Add elements to Queueusing linkedist ");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -56,6 +57,18 @@ namespace StacksAndQueues
                     {
                         Console.WriteLine("The stack is empty");
                     }
+                    break;
+                case 6:
+                    queue.Enqueue(56);
+                    queue.Enqueue(30);
+                    queue.Enqueue(70);
+                    queue.Display();
+                    break;
+                case 7:
+                    queue.EnqueueMethod(56);
+                    queue.EnqueueMethod(30);
+                    queue.EnqueueMethod(70);
+                    queue.DisplayMethod();
                     break;
                 default:
                     Console.WriteLine("Please choose correct option");
