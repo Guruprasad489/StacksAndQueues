@@ -52,5 +52,21 @@ namespace StacksAndQueues
         {
             linkedList.Display();
         }
+
+        public void Dequeue()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("Queue is Empty");
+            }
+            else
+            {
+                this.head = this.head.next;
+            }
+        }
+        public void DequeueMethod()
+        {
+            linkedList.DeleteFirst();
+        }
     }
 }

@@ -17,7 +17,7 @@ namespace StacksAndQueues
 
             Console.WriteLine("Choose an option:");
             Console.WriteLine("\n1. Push element to stack \n2. push element to stack using linkedlist \n3. Peek top element \n4. Delete the top element \n5. Empty the stack" +
-                "\n6. Add elements to Queue \n7. Add elements to Queueusing linkedist ");
+                "\n6. Add elements to Queue \n7. Add elements to Queueusing linkedist \n8. Remove element from Queue \n9. Remove element from Queue using linkedist");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -70,8 +70,26 @@ namespace StacksAndQueues
                     queue.EnqueueMethod(70);
                     queue.DisplayMethod();
                     break;
+                case 8:
+                    queue.Enqueue(56);
+                    queue.Enqueue(30);
+                    queue.Enqueue(70);
+                    queue.Display();
+                    Console.WriteLine("after Dequeue:");
+                    queue.Dequeue();
+                    queue.Display();
+                    break;
+                case 9:
+                    queue.EnqueueMethod(56);
+                    queue.EnqueueMethod(30);
+                    queue.EnqueueMethod(70);
+                    queue.DisplayMethod();
+                    Console.WriteLine("\nafter Dequeue Method:");
+                    queue.DequeueMethod();
+                    queue.DisplayMethod();
+                    break;
                 default:
-                    Console.WriteLine("Please choose correct option");
+                    Console.WriteLine("\nPlease choose correct option");
                     break;
             }
             Console.ReadLine();
